@@ -26,7 +26,7 @@ public class AdapterApplication extends Application {
         Router apiRouter = new Router(this.getContext());
 
         apiRouter.attach(OBJECTS, ObjectsResource.class); //GET http request
-        apiRouter.attach(GET_SET_PROPERTY, GetSetPropertyResource.class); //GET & POST http request
+        apiRouter.attach(GET_SET_PROPERTY, PropertyResource.class); //GET & POST http request
         apiRouter.attach(EVENT_CHANNEL + "/activate", EventChannelResource.class); //POST http request
         apiRouter.attach(EVENT_CHANNEL + "/deactivate", EventChannelResource.class); //DELETE http request
         apiRouter.attach(EVENT_CHANNEL + "/publish", EventChannelResource.class); //PUT http request
