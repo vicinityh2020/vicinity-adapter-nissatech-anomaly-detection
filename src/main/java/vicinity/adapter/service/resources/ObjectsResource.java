@@ -19,7 +19,7 @@ public class ObjectsResource extends ServerResource {
         }
     }
 
-    private static String getObjects() {
+    private static String getObjectsFromFile() {
         try {
             System.out.println("getting objects");
             System.out.println("GETTING OBJECTS FROM: " + System.getProperty("objects.file"));
@@ -32,7 +32,7 @@ public class ObjectsResource extends ServerResource {
     }
 
     @Get("json")
-    public String getPropertyValue() {
-        return getObjects();
+    public String getObjects() {
+        return getObjectsFromFile();
     }
 }
